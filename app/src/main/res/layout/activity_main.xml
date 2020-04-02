@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.justjava.MainActivity"
+        android:layout_margin="20dp">
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:hint="Name"
+            android:layout_marginBottom="12dp"
+            />
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:text="Topping" />
+
+        <CheckBox
+            android:id="@+id/cb_whipped_cream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:textSize="16sp"
+            android:text="Whipped cream"
+            android:layout_marginVertical="12dp"/>
+
+        <CheckBox
+            android:id="@+id/cb_choco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:textSize="16sp"
+            android:text="Chocolate"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:id="@+id/tv_quantity"
+            android:text="Quantity"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btn_decrement"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:textSize="18sp"
+                android:onClick="decrement"/>
+
+            <TextView
+                android:id="@+id/tv_qty_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                />
+
+            <Button
+                android:id="@+id/btn_increment"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:textSize="18sp"
+                android:onClick="increment"/>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:id="@+id/tv_order_summary"
+            android:text="Order Summary" />
+
+        <Button
+            android:id="@+id/btn_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ORDER"
+            android:onClick="submitOrder"
+            />
+    </LinearLayout>
+</ScrollView>
