@@ -45,13 +45,13 @@ public class MainActivity extends AppCompatActivity {
             displayMessage(priceMessage);
         }
 
-        Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setData(Uri.parse("mailto:"));
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Just java order for " + name);
-        intent.putExtra(Intent.EXTRA_TEXT, priceMessage);
-        if (intent.resolveActivity(getPackageManager()) != null){
-            startActivity(intent);
-        }
+//        Intent intent = new Intent(Intent.ACTION_SENDTO);
+//        intent.setData(Uri.parse("mailto:"));
+//        intent.putExtra(Intent.EXTRA_SUBJECT, "Just java order for " + name);
+//        intent.putExtra(Intent.EXTRA_TEXT, priceMessage);
+//        if (intent.resolveActivity(getPackageManager()) != null){
+//            startActivity(intent);
+//        }
     }
 
     /**
@@ -111,11 +111,11 @@ public class MainActivity extends AppCompatActivity {
      */
     private int calculatePrice() {
         price = numberOfCoffees * 5;
-        if (hasWhippedCream == true && hasChoco == true){
+        if (hasWhippedCream && hasChoco){
             price = price + 3;
-        } else if (hasWhippedCream == true){
+        } else if (hasWhippedCream){
             price++;
-        } else if (hasChoco == true){
+        } else if (hasChoco){
             price = price + 2;
         }
         return price;
